@@ -1,1 +1,1 @@
-# End to End Deployment of Face Recognition Attendance Managememt System using CNN
+# End to End Face Recognition Based Attendance Managememt System using CNN
