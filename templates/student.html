@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='bootstrap/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/styles.min.css')}}">
+</head>
+
+<body>
+  <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+    <div class="container"><a class="navbar-brand logo" href="{{url_for('index')}}"><strong>STUDENT DASHBOARD</strong></a></div>
+  </nav>
+  <main class="page login-page">
+    <section class="clean-block clean-form dark">
+      <div class="container">
+        <br>
+        <h4 style='float:left;'>
+          <p id="today"> </p>
+        </h4>
+        <div class="block-heading">
+          <div class="card">
+            <div class="card-body" style="margin: 10px;">
+              <h4 class="card-title">Welcome {{nam}}</h4>
+              <h6 class="text-muted card-subtitle mb-2">SCOPE SCHOOL</h6><img>
+              <img src="{{url_for('static',filename='images/dump/Person.jpg')}}" alt="No picture found" style="width: 20%;  height: auto;">
+            </div>
+            <h4>
+              <p>Status: <b id="status">{{stat}}</b>
+              </p>
+            </h4>
+            <br>
+          </div>
+        </div>
+    </section>
+  </main>
+  <footer class="page-footer dark">
+    <div class="footer-copyright">
+      <p>©&nbsp;&nbsp;HCI PROJECT<br></p>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+  <script src="{{url_for('static',filename='js/script.min.js')}}"></script>
+  <script>
+    document.getElementById("today").innerHTML = "Today's Date: " + new Date();
+    if (document.getElementById("status").innerHTML == "Absent")
+      document.getElementById("status").style.color = "red";
+    else if (document.getElementById("status").innerHTML == "Present")
+      document.getElementById("status").style.color = "blue";
+  </script>
+
+
+
+</body>
+
+</html>

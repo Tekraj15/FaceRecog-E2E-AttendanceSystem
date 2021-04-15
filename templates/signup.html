@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='bootstrap/css/bootstrap.min1.css')}}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/styles.min1.css')}}">
+</head>
+
+<body>
+  <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+    <div class="container"><a class="navbar-brand logo" href="#">Student SignUp</a></div>
+  </nav>
+  <main class="page registration-page">
+    <section class="clean-block clean-form dark">
+      <div class="container">
+        <div class="block-heading">
+          <h2 class="text-info">Welcome Dear Student!</h2>
+          <p><br>Welcome all of you to the new academic year! <br>We are thrilled to be partnering with you as you participate in an exciting educational journey of discovery. Whether you are a returning, first-year, or transfer student, you will
+            find unlimited opportunities to enjoy campus life by learning, exploring, and engaging together.<br><br></p>
+        </div>
+        <form action="{{url_for('signup')}}" method="post" enctype="multipart/form-data">
+          <div class="form-group"><label for="name">First Name</label><input class="form-control item" type="text" id="name" name="F_name"></div>
+          <div class="form-group"><label for="password">Last Name</label><input class="form-control" type="text" name="L_name"></div>
+          <div class="form-group"><label for="email">Email</label><input class="form-control item" type="email" id="email" name="email"></div>
+          <div class="form-group"><label>Password</label><input class="form-control" type="password" name="password"></div>
+          <div class="form-group"><label>Upload Your Image</label><input type="file" name="file"></div>
+          <input class="btn btn-primary btn-block" type="submit" value="Sign Up">
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer dark">
+    <div class="footer-copyright">
+      <p>© HCI PROJECT</p>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+  <script src="{{url_for('static',filename='js/script.min1.js')}}"></script>
+</body>
+
+</html>
